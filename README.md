@@ -15,22 +15,20 @@
 
 ![image](_repo/vue-wordpress-logo.png)
 
-# WordPress Starter Plugin - Vue.js
+# WordPress Starter Plugin - React.js
 
 <div align="center">
   <p align="center">
-This is a forked repo from <a href="https://github.com/EvanAgee/vuejs-wordpress-plugin-starter" target="_blank">EvanAgee/vuejs-wordpress-plugin-starter</a>. Evan hasn't updated this repo in over 4 years, so we decided to fork it and manage our own version. This is still the same product, but we hope we can make it better.
-
-Our goal here is to make plugin development easier with Vue. While we didn't originally start this repo, we have exponentially surpassed it's predecessor.
+Our goal here is to make plugin development easier with React. This structure stems from our [WordPress Starter Plugin in Vue](https://github.com/jared-leddy/wordpress-plugin-starter-vue), but has been reworked for React.
 <br />
-<a href="https://github.com/jared-leddy/wordpress-plugin-starter-vue"><strong>Explore the docs »</strong></a>
+<a href="https://github.com/jared-leddy/wordpress-plugin-starter-react"><strong>Explore the docs »</strong></a>
 <br />
 <br />
-<a href="https://github.com/jared-leddy/wordpress-plugin-starter-vue">View Demo</a>
+<a href="https://github.com/jared-leddy/wordpress-plugin-starter-react">View Demo</a>
 &middot;
-<a href="https://github.com/jared-leddy/wordpress-plugin-starter-vue/issues">Report Bug</a>
+<a href="https://github.com/jared-leddy/wordpress-plugin-starter-react/issues">Report Bug</a>
 &middot;
-<a href="https://github.com/jared-leddy/wordpress-plugin-starter-vue/issues">Request Feature</a>
+<a href="https://github.com/jared-leddy/wordpress-plugin-starter-react/issues">Request Feature</a>
 
   </p>
 </div>
@@ -71,7 +69,7 @@ Our goal here is to make plugin development easier with Vue. While we didn't ori
 
 WordPress plugin development is a cumbersome endeavor. This is much harder to manage when your background is Node.js and JavaScript, instead of Laravel and PHP. This boilerplate project will rapidly get you up and running with developing a new plugin.
 
-In the spirit of a modern upgrade, we have converted this into a TypeScript Vue plugin template.
+In the spirit of a modern upgrade, we have built this into a TypeScript React plugin template.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -80,7 +78,7 @@ In the spirit of a modern upgrade, we have converted this into a TypeScript Vue 
 - [Node Version Manager (NVM)](https://github.com/nvm-sh/nvm)
 - [Node.js](https://nodejs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Vue.js](https://vuejs.org/)
+- [React.js](https://react.dev/)
 - [Vite](https://vite.dev/)
 - [SASS/SCSS](https://sass-lang.com/)
 - [Gulp.js](https://gulpjs.com/)
@@ -109,10 +107,10 @@ nvm use
 
 Before you start working, you will need to rename all of the correct files, functions, assets, etc. **BEFORE** you run `npm install`. This setp is also about naming your plugin with your own namespacing.
 
-1. Search and replace **the entire repo** for any occurances of `vwp-plugin`.
-2. Search and replace **the entire repo** for any occurances of `vwp_plugin`.
-3. Search and replace **the entire repo** for any occurances of `VwpPlugin`.
-4. Manually rename any files in **the entire repo** that are prefixed with `vwp-plugin`.
+1. Search and replace **the entire repo** for any occurances of `wp-react-starter`.
+2. Search and replace **the entire repo** for any occurances of `wp_react_starter`.
+3. Search and replace **the entire repo** for any occurances of `WPReactStarter`.
+4. Manually rename any files in **the entire repo** that are prefixed with `wp-react-starter`.
 
 ### Clean Unused Files
 
@@ -145,7 +143,7 @@ There are a few instances where you may not need the starting files and folder s
 
 1. Clone the repo.
    ```sh
-   git clone https://github.com/jared-leddy/wordpress-plugin-starter-vue.git
+   git clone https://github.com/jared-leddy/wordpress-plugin-starter-react.git
    ```
 2. Install NPM packages.
    ```zsh
@@ -258,14 +256,14 @@ Removing these files can help reduce clutter, decrease the size of your final bu
 
    - The majority of our PHP is located in `/src/php`.
    - During the move step above, we are moving this `php` folder into out plugin folder.
-     - Example: `/vwp-plugin/php`
-   - Here in this task, we will move all of those contents up a tree level (i.e., to `/vwp-plugin`).
+     - Example: `/wp-react-starter/php`
+   - Here in this task, we will move all of those contents up a tree level (i.e., to `/wp-react-starter`).
    - This step will leave an empty `php` folder intentionally.
 
 5. Delete Empty Folders
 
    - Deleting files out of our plugin folder, and moving the PHP files up a level, will leave empty folders lying around.
-   - Here, we will recursively delete all empty folders from the parent plugin folder (i.e., `/vwp-plugin`).
+   - Here, we will recursively delete all empty folders from the parent plugin folder (i.e., `/wp-react-starter`).
 
 ### Clean Project
 
@@ -274,7 +272,7 @@ This covers the series of tasks that are used to clean up the plugin folder afte
 1. Delete Folders
 
    - Delete the `/dist` folder that is generated by Vite.
-   - Delete the plugin folder (i.e., `/vwp-plugin`).
+   - Delete the plugin folder (i.e., `/wp-react-starter`).
 
 ### Zip Project
 
@@ -297,12 +295,13 @@ As we go through and develop our own plugins using these frameworks, we will doc
 ### Has Problems
 
 - [Naive UI](https://www.naiveui.com/)
-   - We tried using this in an admin-only plugin, but had issues trying to keep Vue loaded. There is an open issue for extensive testing.
+
+  - We tried using this in an admin-only plugin, but had issues trying to keep Vue loaded. There is an open issue for extensive testing.
 
 - [Vuetify](https://vuetifyjs.com/en/)
-   - We tried using this in an admin-only plugin, but ended up having to use `!important` in all of our styles. That's not the best use of a framework like this. There is an open issue for extensive testing.
+  - We tried using this in an admin-only plugin, but ended up having to use `!important` in all of our styles. That's not the best use of a framework like this. There is an open issue for extensive testing.
 
-### Not Tested 
+### Not Tested
 
 - [Bootstrap Vue](https://bootstrap-vue.org/)
 
@@ -312,7 +311,7 @@ As we go through and develop our own plugins using these frameworks, we will doc
 
 ## Roadmap
 
-We don't have a dedicated roadmap outside of Github. Simply check the [open issues](https://github.com/jared-leddy/wordpress-plugin-starter-vue/issues) for a full list of proposed features (and known issues).
+We don't have a dedicated roadmap outside of Github. Simply check the [open issues](https://github.com/jared-leddy/wordpress-plugin-starter-react/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -348,7 +347,7 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 
 [Carbon Digital](https://carbondigital.us)
 
-Project Link: [https://github.com/jared-leddy/wordpress-plugin-starter-vue](https://github.com/jared-leddy/wordpress-plugin-starter-vue)
+Project Link: [https://github.com/jared-leddy/wordpress-plugin-starter-react](https://github.com/jared-leddy/wordpress-plugin-starter-react)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -380,13 +379,13 @@ Without these people and tools, life would be too complicated.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/jared-leddy/wordpress-plugin-starter-vue.svg?style=for-the-badge
-[contributors-url]: https://github.com/jared-leddy/wordpress-plugin-starter-vue/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/jared-leddy/wordpress-plugin-starter-vue.svg?style=for-the-badge
-[forks-url]: https://github.com/jared-leddy/wordpress-plugin-starter-vue/network/members
-[stars-shield]: https://img.shields.io/github/stars/jared-leddy/wordpress-plugin-starter-vue.svg?style=for-the-badge
-[stars-url]: https://github.com/jared-leddy/wordpress-plugin-starter-vue/stargazers
-[issues-shield]: https://img.shields.io/github/issues/jared-leddy/wordpress-plugin-starter-vue.svg?style=for-the-badge
-[issues-url]: https://github.com/jared-leddy/wordpress-plugin-starter-vue/issues
-[license-shield]: https://img.shields.io/github/license/jared-leddy/wordpress-plugin-starter-vue.svg?style=for-the-badge
-[license-url]: https://github.com/jared-leddy/wordpress-plugin-starter-vue/blob/master/license.md
+[contributors-shield]: https://img.shields.io/github/contributors/jared-leddy/wordpress-plugin-starter-react.svg?style=for-the-badge
+[contributors-url]: https://github.com/jared-leddy/wordpress-plugin-starter-react/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jared-leddy/wordpress-plugin-starter-react.svg?style=for-the-badge
+[forks-url]: https://github.com/jared-leddy/wordpress-plugin-starter-react/network/members
+[stars-shield]: https://img.shields.io/github/stars/jared-leddy/wordpress-plugin-starter-react.svg?style=for-the-badge
+[stars-url]: https://github.com/jared-leddy/wordpress-plugin-starter-react/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jared-leddy/wordpress-plugin-starter-react.svg?style=for-the-badge
+[issues-url]: https://github.com/jared-leddy/wordpress-plugin-starter-react/issues
+[license-shield]: https://img.shields.io/github/license/jared-leddy/wordpress-plugin-starter-react.svg?style=for-the-badge
+[license-url]: https://github.com/jared-leddy/wordpress-plugin-starter-react/blob/main/license.md

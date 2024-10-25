@@ -1,15 +1,15 @@
 <?php
 /**
  * @wordpress-plugin
- * Plugin Name:       Vue WordPress
- * Plugin URI:        http://vuewp.com
+ * Plugin Name:       React WordPress Starter
+ * Plugin URI:        http://fortembr.com
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
- * Author:            Vue WordPress
- * Author URI:        vuewp.com
+ * Author:            React WordPress
+ * Author URI:        fortembr.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       vwp-plugin
+ * Text Domain:       wp-react-starter
  * Domain Path:       /languages
  */
 
@@ -18,7 +18,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-class VwpPlugin
+class WPReactStarter
 {
   public $plugin;
 
@@ -33,19 +33,19 @@ class VwpPlugin
   }
 
   public function settings_link( $links ) {
-    $settings_link = '<a href="admin.php?page=vwp_plugin">Settings</a>';
+    $settings_link = '<a href="admin.php?page=wp_react_starter">Settings</a>';
     array_push($links, $settings_link);
     return $links;
   }
 
   function enqueue_assets() {
     wp_enqueue_style( "$this->plugin-css", plugins_url('/assets/styles.css', __FILE__) );
-    wp_enqueue_script( "$this->plugin-js", plugins_url('/assets/main.js', __FILE__), null, null, true );
-    wp_enqueue_script( "$this->plugin-js", plugins_url('/assets/scripts.js', __FILE__), null, null, true );
+    wp_enqueue_script( "$this->plugin-main-js", plugins_url('/assets/main.js', __FILE__), null, null, true );
+    wp_enqueue_script( "$this->plugin-scripts-js", plugins_url('/assets/scripts.js', __FILE__), null, null, true );
   }
 
   public function add_admin_page() {
-    add_menu_page("Vue WordPress", 'Vue WordPress', 'manage_options', 'vwp_plugin', array($this, 'admin_index'), '');
+    add_menu_page("React WordPress", 'React WordPress', 'manage_options', 'wp_react_starter', array($this, 'admin_index'), '');
   }
 
   public function admin_index() {
@@ -53,15 +53,15 @@ class VwpPlugin
   }
 }
 
-if ( class_exists('VwpPlugin') ) {
-  $vwpPlugin = new VwpPlugin();
-  $vwpPlugin->register();
+if ( class_exists('WPReactStarter') ) {
+  $WPReactStarter = new WPReactStarter();
+  $WPReactStarter->register();
 }
 
 // Activation
-require_once plugin_dir_path(__FILE__)  . 'includes/vwp-plugin-activate.php';
-register_activation_hook( __FILE__, array( 'VwpPluginActivate', 'activate' ) );
+require_once plugin_dir_path(__FILE__)  . 'includes/wp-react-starter-activate.php';
+register_activation_hook( __FILE__, array( 'WPReactStarterActivate', 'activate' ) );
 
 // Deactivation
-require_once plugin_dir_path(__FILE__)  . 'includes/vwp-plugin-deactivate.php';
-register_deactivation_hook( __FILE__, array( 'VwpPluginDeactivate', 'deactivate' ) );
+require_once plugin_dir_path(__FILE__)  . 'includes/wp-react-starter-deactivate.php';
+register_deactivation_hook( __FILE__, array( 'WPReactStarterDeactivate', 'deactivate' ) );

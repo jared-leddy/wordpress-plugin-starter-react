@@ -2,7 +2,7 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "module": "ESNext",
     "moduleResolution": "node",
     "outDir": "dist",
@@ -18,9 +18,9 @@
     "src/**/*.ts",
     "src/**/**/*.d.ts",
     "src/**/**/**/*.d.ts",
-    "src/*.vue",
-    "src/**/*.vue",
-    "src/**/**/*.vue",
-    "src/**/**/**/*.vue"
+    "src/*.tsx",
+    "src/**/*.tsx",
+    "src/**/**/*.tsx",
+    "src/**/**/**/*.tsx"
   ]
 }
