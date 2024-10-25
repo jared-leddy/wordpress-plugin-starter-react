@@ -6,11 +6,7 @@
   "scripts": {
     "start:dev": "vite",
     "build:dev": "gulp clean-project && vite build && gulp build-package && gulp clean-package",
-    "build:prod": "npm run build:dev && gulp zip-plugin && gulp clean-project",
-    "helper:build-package": "gulp build-package",
-    "helper:clean-package": "gulp clean-package",
-    "helper:clean-project": "gulp clean-project",
-    "helper:zip-plugin": "gulp zip-plugin"
+    "build:prod": "npm run build:dev && gulp zip-plugin && gulp clean-project"
   },
   "author": "Jared Ledbetter",
   "license": "ISC",
