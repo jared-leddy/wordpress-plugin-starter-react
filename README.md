@@ -13,7 +13,7 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-![image](_repo/vue-wordpress-logo.png)
+![image](_repo/logo.png)
 
 # WordPress Starter Plugin - React.js
 
