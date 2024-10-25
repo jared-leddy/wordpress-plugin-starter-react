@@ -1,6 +1,6 @@
 {
   "name": "wp-react-starter",
-  "version": "2.1.0",
+  "version": "1.0.0",
   "description": "A boilerplate WordPress plugin in React.",
   "main": "index.js",
   "scripts": {
