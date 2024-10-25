@@ -19,7 +19,9 @@
 
 <div align="center">
   <p align="center">
-Our goal here is to make plugin development easier with React. This structure stems from our [WordPress Starter Plugin in Vue](https://github.com/jared-leddy/wordpress-plugin-starter-vue), but has been reworked for React.
+
+Our goal here is to make plugin development easier with React. This structure stems from our [WordPress Starter Plugin Vue](https://github.com/jared-leddy/wordpress-plugin-starter-vue), but has been reworked for React.
+
 <br />
 <a href="https://github.com/jared-leddy/wordpress-plugin-starter-react"><strong>Explore the docs »</strong></a>
 <br />
