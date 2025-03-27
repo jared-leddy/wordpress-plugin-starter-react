@@ -109,10 +109,10 @@ nvm use
 
 Before you start working, you will need to rename all of the correct files, functions, assets, etc. **BEFORE** you run `npm install`. This setp is also about naming your plugin with your own namespacing.
 
-1. Search and replace **the entire repo** for any occurances of `wp-react-starter`.
-2. Search and replace **the entire repo** for any occurances of `wp_react_starter`.
-3. Search and replace **the entire repo** for any occurances of `WPReactStarter`.
-4. Manually rename any files in **the entire repo** that are prefixed with `wp-react-starter`.
+1. Manually rename any files in **the entire repo** that are prefixed with `wp-react-starter`.
+2. Search and replace **the entire repo** for any occurances of `wp-react-starter`.
+3. Search and replace **the entire repo** for any occurances of `wp_react_starter`.
+4. Search and replace **the entire repo** for any occurances of `WPReactStarter`.
 
 ### Clean Unused Files
 
